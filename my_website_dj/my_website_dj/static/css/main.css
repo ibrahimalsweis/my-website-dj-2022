@@ -35,10 +35,7 @@ a:hover {
   color: var(--main-color);
 }
 
-
-
 /* Start Base  */
-
 
 #main-btn {
   background-color: var(--main-color-alt);
@@ -62,9 +59,8 @@ a:hover {
 
 /* End Base  */
 
-
 /* Start header */
-.header{
+.header {
   z-index: 10000;
 }
 .header .navbar-light .navbar-nav .nav-link {
@@ -83,10 +79,18 @@ a:hover {
 
 /* Start box-comments-&share */
 
-
 .box-comments .container {
   height: calc(100vh - 88px);
   position: relative;
+}
+.box-comments .container .modal{
+  width: auto;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: steelblue;
+  height: calc(100vh - 100px);
+    top: auto;
+    bottom: 0;
 }
 
 .box-comments .box-comments.active {
@@ -99,7 +103,6 @@ a:hover {
 .box-comments .close:hover {
   color: var(--main-color);
 }
-
 
 .box-comments h4 {
   border-bottom: 4px solid var(--box-shadow-color);
@@ -154,10 +157,9 @@ a:hover {
 }
 /* End box-comments-&-share */
 
-
 /* Start main */
 main {
-  padding-top:100px;
+  padding-top: 100px;
 }
 .main .container > .row > div {
   position: relative;
@@ -170,14 +172,15 @@ main {
   height: 30px;
 }
 .main .modal-dialog-scrollable {
-  height: calc(100% - 1rem);
   max-width: 100%;
+  height: 100%!important;
+  margin: 0!important;
 }
-.main .modal-content{
+
+.main .modal-content {
   border: none;
 }
 /* End main */
-
 
 /* Srart popular-posts  */
 .popular-posts > h5 {
@@ -236,9 +239,9 @@ main {
 
 /* Start media */
 
-@media (max-width:757px) {
+@media (max-width: 757px) {
   .modal-dialog-scrollable,
-  .modal-body{
+  .modal-body {
     overflow-y: visible;
   }
 }

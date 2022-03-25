@@ -1,0 +1,81 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ar">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>أبراهيم الصويص | الصفحة الرئيسية</title>
+    <!--=============== FAVICON ===============-->
+    <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon" />
+
+    <!-- ========= Google font   =========  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;500;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <!-- ========= normalize  =========  -->
+    <link rel="stylesheet" href="{% static '/css/normalize.css' %}" />
+    <!-- ========= Bootstrap  =========  -->
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}" />
+    <link rel="stylesheet" href="{% static '/css/bootstrap.min.css.map' %}" />
+    <!-- ========= Font Asowome  =========  -->
+    <link rel="stylesheet" href="{% static 'css/all.min.css' %}" />
+    <!-- ========= Css  =========  -->
+    <link rel="stylesheet" href="{% static 'css/main.css' %}" />
+  </head>
+  <body>
+
+  <!-- Start Header -->
+  <div class="header position-fixed w-100">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <div class="container">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ms-auto my-2 mb-lg-0 links_header">
+            <li class="nav-item"><a href="#" class="nav-item mx-2 border rounded-circle d-flex justify-content-center align-items-center"
+                style="width: 40px; height: 40px">
+                <img src="{% static 'img/img-1.png' %}" class="img-fluid rounded-circle w-100 h-100" alt="" />
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="{% url 'index' %}">الصفحة الرئيسية</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="{% url 'new_post' %}">أضافة منشور جديد </a>
+            </li>
+            <li class="nav-item mx-2"><a class="nav-link" href="#">تسجيل الدخول</a></li>
+            <li class="nav-item mx-2"><a class="nav-link" href="#">أنشاء حساب جديد </a></li>
+
+          </ul>
+          <!-- <form class="d-flex">
+        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-success" type="submit">Search</button>
+      </form> -->
+        </div>
+        <a class="navbar-brand logo" href="#">أبراهيم الصويص</a>
+
+      </div>
+    </nav>
+  </div>
+  <!-- End Header -->
+
+
+{% block content %}
+
+{% endblock content %}
+
+    <!-- ========= Bootstrap  =========  -->
+    <script src="{% static 'js/bootstrap.bundle.min.js' %}"></script>
+     <script src="{% static 'js/bootstrap.bundle.min.js.map' %}"></script> 
+    <!-- ========= Font Asowome  =========  -->
+    <script src="{% static 'js/all.min.js' %}"></script>
+
+    <script src="{% static 'js/main.js' %}"></script>
+  </body>
+</html>
