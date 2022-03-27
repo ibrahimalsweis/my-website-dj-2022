@@ -8,6 +8,13 @@
   <main class="main overflow-hidden">
     <div class="container">
       <div class="row pt-3">
+        <div class="col-md-8">
+          {% if messages %}
+            {% for message in messages %}
+            <div class="alert alert-{{message.tags}}">{{message}}</div>
+            {% endfor %}
+          {% endif %}
+        </div>
         <div class="col-md-8 posts py-2">
           <ul class="list-group">
             {% for post in posts  %}

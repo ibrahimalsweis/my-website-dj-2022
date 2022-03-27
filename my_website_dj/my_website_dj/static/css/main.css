@@ -36,7 +36,10 @@ a:hover {
 }
 
 /* Start Base  */
-
+.errorlist li{
+  color: red;
+  list-style: none;
+}
 #main-btn {
   background-color: var(--main-color-alt);
   margin: 10px 0;
