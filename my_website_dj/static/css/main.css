@@ -83,23 +83,15 @@ a:hover {
   height: calc(100vh - 88px);
   position: relative;
 }
-.box-comments .container .modal{
+.box-comments .container .modal {
   width: auto;
   left: 50%;
   transform: translateX(-50%);
-  background-color: steelblue;
   height: calc(100vh - 100px);
-    top: auto;
-    bottom: 0;
-}
-
-.box-comments .box-comments.active {
+  top: auto;
   bottom: 0;
 }
-.box-comments .box-comments .close {
-  height: 30px;
-  cursor: pointer;
-}
+
 .box-comments .close:hover {
   color: var(--main-color);
 }
@@ -108,40 +100,38 @@ a:hover {
   border-bottom: 4px solid var(--box-shadow-color);
 }
 
-.box-comments .list-group-item img {
+.main .list-group-item img {
   width: 30px;
   height: 30px;
 }
-.box-comments .list-group-item span {
+.main .list-group-item span {
   font-size: 12px;
 }
-.box-comments .list-group-item .dropdown {
+.list-group-item .dropdown {
   left: 10px;
   top: -1px;
   font-size: 20px;
 }
-.box-comments .user-name img {
+ .user-name img {
   width: 30px;
 }
-.box-comments .list-group-item .user-name:hover small {
+.list-group-item .user-name:hover small {
   transition: var(--main-transition);
   text-decoration: underline;
 }
-.box-comments .list-group-item .dropdown button {
+.list-group-item .dropdown button {
   border: none;
   outline: none;
   background-color: transparent;
 }
-.box-comments .list-group-item .dropdown .dropdown-menu {
-  /* left: -125px !important; */
-}
+
 .dropdown-item:focus,
 .dropdown-item:hover {
   background-color: var(--main-color);
   color: white;
 }
 
-.box-comments .content-commemt a {
+.content-commemt a {
   color: var(--main-color);
 }
 .box-comments .copy-link {
@@ -155,6 +145,17 @@ a:hover {
 .box-comments .copy-link:hover {
   color: var(--main-color);
 }
+#like-comment,#copy-comment{
+  cursor: pointer;
+  transition: var(--main-transition);
+}
+#like-comment.active{
+  color: var(--main-color);
+}
+#copy-comment:hover{
+  font-weight: bold;
+  color: var(--main-color-alt);
+}
 /* End box-comments-&-share */
 
 /* Start main */
@@ -164,20 +165,20 @@ main {
 .main .container > .row > div {
   position: relative;
 }
-.main .posts .post {
+.posts .post {
   border: 2px solid #e3e3e3;
 }
-.main .posts .user-info .user img {
+.posts .user-info .user img {
   width: 30px;
   height: 30px;
 }
-.main .modal-dialog-scrollable {
+.modal-dialog-scrollable {
   max-width: 100%;
-  height: 100%!important;
-  margin: 0!important;
+  height: 100% !important;
+  margin: 0 !important;
 }
 
-.main .modal-content {
+.modal-content {
   border: none;
 }
 /* End main */
@@ -243,6 +244,9 @@ main {
   .modal-dialog-scrollable,
   .modal-body {
     overflow-y: visible;
+  }
+  .box-comments .container .modal {
+    width: 100%;
   }
 }
 /* End media */

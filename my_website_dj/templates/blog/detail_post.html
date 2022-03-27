@@ -1,0 +1,200 @@
+
+<main class="main">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-md-8">
+        <ul class="list-group posts">
+          <!-- Start post -->
+          <li class="list-group-item post my-2">
+            <div class="user-info d-flex position-relative justify-content-between align-items-center">
+              <div class="d-flex justify-content-between align-items-center">
+                <a href="#" class="user text-decoration-none d-flex align-items-center">
+                  <img
+                    src="{% static 'img/avatar-05.png' %}"
+                    class="img-fluid rounded-circle"
+                    alt=""
+                  />
+                  <div class="mx-2"><small>{{post.auth}}</small><br /></div>
+                </a>
+                <small class="position-absolute data-time">
+                  {{post.date_post}}
+                </small>
+              </div>
+              <div class="dropdown">
+                <i
+                  class="fa-solid fa-ellipsis fs-5"
+                  type="button"
+                  id="dropdownMenuButton1"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                </i>
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                  <li>
+                    <a
+                      class="dropdown-item"
+                      href="#"
+                      data-bs-toggle="modal"
+                      data-bs-target="#share"
+                      >مشاركة</a
+                    >
+                  </li>
+                  <li><a class="dropdown-item" href="#">حظر</a></li>
+                  <li><a class="dropdown-item" href="#">أخفاء المنشور</a></li>
+                  <li><a class="dropdown-item" href="#">ٌأبلاغ</a></li>
+                  <li><a class="dropdown-item" href="#">حذف</a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="content-post my-2 ">
+              <p class="my-3 lh-lg fs-4">{{post.content_post}}</p>
+            </div>
+            <ul
+              class="icons list-group flex-row justify-content-around position-relative"
+            >
+              <li class="list-group-item like-post active">
+                <i class="fa-solid fa-thumbs-up"></i>
+                <small>أعجاب</small>
+              </li>
+              <button
+                class="btn-share"
+                type="button"
+                data-bs-toggle="modal"
+                data-bs-target="#share"
+              >
+                <i class="fa-solid fa-share-from-square"></i>
+                <small>مشاركة</small>
+              </button>
+            </ul>
+
+            <div class="box-comments position-absolute w-100 overflow-hidden z-index-100">
+                <div class="modal fade w-100"id="share" tabindex="-1" aria-labelledby="share-title" aria-hidden="true" >
+                  <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <h5 class="modal-title" id="share-title">
+                          مشاركة المنشور على ....
+                        </h5>
+                        <button
+                          type="button"
+                          class="btn-close m-0"
+                          data-bs-dismiss="modal"
+                          aria-label="Close"
+                        ></button>
+                      </div>
+                      <div class="modal-body">
+                        <span class="rounded-circle copy-link fs-2"
+                          ><i class="fa-solid fa-copy"></i
+                        ></span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+            </div>
+
+            <div class="row mt-3 pt-4 border">
+              <form class="w-100" method='POST'>
+                {% csrf_token %}
+                <div class="row">
+                  <div class='col-12'>
+                  {{form_comment  }}
+
+                    <button type="submit" class="btn text-white" id="main-btn">نشر</button>
+                  </div>
+                </div>
+              </form>
+              <div class="col-md-12">
+                    {% if  comments.count == 0 %}
+                        <h3 class="text-center">لا توجد تعليقات </h3>
+                    {% else %}
+                        <h3 class="text-center">ألتعليقات ({{comments.count}})</h3>
+                    {% endif %}
+              </div>
+              <div class="col-md-12">
+                <!-- main comments  -->
+                <ul class="list-group">
+                  {% for comment in comments %}
+
+                  <!-- Start comment -->
+                  <li
+                    class="list-group-item bg-white d-flex flex-wrap border rounded my-2 pt-3 position-relative"
+                  >
+                    <div class="row w-100">
+                      <div class="col-12">
+                        <div class="d-flex flex-wrap">
+                          <div class="dropdown position-absolute">
+                            <button
+                              class=" "
+                              type="button"
+                              id="dropdownMenuButton1"
+                              data-bs-toggle="dropdown"
+                              aria-expanded="false"
+                            >
+                              <i class="fa-solid fa-ellipsis"></i>
+                            </button>
+                            <ul
+                              class="dropdown-menu"
+                              aria-labelledby="dropdownMenuButton1"
+                            >
+                              <li>
+                                <a class="dropdown-item" href="#"
+                                  >أخفاء التعليق</a
+                                >
+                              </li>
+                              <li><a class="dropdown-item" href="#">حذف</a></li>
+                              <li>
+                                <a class="dropdown-item" href="#">ألابلاغ </a>
+                              </li>
+                            </ul>
+                          </div>
+                          <a
+                            href="#"
+                            class="user-name w-100 d-flex align-items-center text-decoration-none"
+                          >
+                            <img
+                              src="{% static 'img/avatar-05.png' %}"
+                              class="img-fluid rounded-circle"
+                              alt=""
+                              style="width: 30px"
+                            />
+                            <small class="mx-2">{{comment.username}} </small>
+                          </a>
+                          <small
+                            class="mx-2 position-absolute"
+                            style="left: 10px; top: 22px"
+                            >{{comment.date_comment}}</small
+                          >
+                          <p class="p-2 content-commemt lead fs-5">{{comment.content_comment}}</p>
+                        </div>
+                      </div>
+
+                      <div class="col-12">
+                        <div
+                          class="like-reply d-flex w-100 flex-row justify-content-around mt-3"
+                        >
+                          <label class="active" id="like-comment">
+                            <i class="fa-solid fa-thumbs-up"></i>
+                            <span>أعجاب</span>
+                          </label>
+                          <label id="copy-comment">
+                            <i class="fa-solid fa-share-from-square"></i>
+                            <span> نسخ</span>
+                          </label>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <!-- End comment -->
+                  {% endfor %}
+                </ul>
+                <!-- End comments  -->
+              </div>
+            </div>
+          </li>
+          <!-- End post -->
+        </ul>
+      </div>
+    </div>
+  </div>
+</main>
+{% endblock content %}

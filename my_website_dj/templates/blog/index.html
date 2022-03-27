@@ -3,258 +3,7 @@
 {% load static %}
 {% block content %}
 
-  {% comment %} <!-- Start box-comments-share   -->
-  <div class="box-comments  position-absolute w-100 overflow-hidden  z-index-100">
-    <div class="container ">
-      <div class="modal fade" id="box-comments" tabindex="-1" aria-labelledby="scroll-title" style="display: none;" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-scrollable pt-5">
-          <div class="modal-content">
-            <div class="modal-header">
-              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-              <h5 class="modal-title" id="scroll-title">ألتعليقات</h5>
-            </div>
-            <div class="modal-body">
-          <!-- main comments  -->
-          <ul class="list-group">
-            <!-- Start comment -->
-            <li class="list-group-item bg-white d-flex flex-wrap border  rounded my-2 pt-3 position-relative ">
-              <div>
-                <div class="d-flex flex-wrap">
-                  <div class="dropdown position-absolute">
-                    <button class=" " type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown"
-                      aria-expanded="false">
-                      <i class="fa-solid fa-ellipsis"></i>
-                    </button>
-                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                      <li><a class="dropdown-item" href="#">أخفاء التعليق</a></li>
-                      <li><a class="dropdown-item" href="#">نسخ التعليق</a></li>
-                      <li><a class="dropdown-item" href="#">ألابلاغ </a></li>
-                    </ul>
-                  </div>
-                  <a href="#" class="user-name w-100 d-flex align-items-center text-decoration-none">
-                    <img src="{% static 'img/avatar-05.png' %}" class="img-fluid rounded-circle" alt="" style="width: 30px;"/>
-                    <small class="mx-2">miro </small>
-                  </a>
-                  <span class="p-2 content-commemt">هو شاعر من شعراء العصر المملوكي في مصر والذي كان من شعراء
-                    القرن الثامن الهجري والموافق الرابع عشر الميلادي</span>
-                </div>
-
-
-                <div class="like-reply d-flex w-100 justify-content-around mt-3">
-                  <label class="active">
-                    <i class="fa-solid fa-thumbs-up"></i>
-                    <span>أعجاب</span>
-                  </label>
-                  <label>
-                    <i class="fa-solid fa-share-from-square"></i>
-                    <span> مشاركة</span>
-                  </label>
-                </div>
-              </div>
-
-            </li>
-            <li class="list-group-item bg-white d-flex flex-wrap border  rounded my-2 pt-3 position-relative ">
-              <div>
-                <div class="d-flex flex-wrap">
-                  <div class="dropdown position-absolute">
-                    <button class=" " type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown"
-                      aria-expanded="false">
-                      <i class="fa-solid fa-ellipsis"></i>
-                    </button>
-                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                      <li><a class="dropdown-item" href="#">أخفاء التعليق</a></li>
-                      <li><a class="dropdown-item" href="#">نسخ التعليق</a></li>
-                      <li><a class="dropdown-item" href="#">ألابلاغ </a></li>
-                    </ul>
-                  </div>
-                  <a href="#" class="user-name w-100 d-flex align-items-center text-decoration-none">
-                    <img src="{% static 'img/avatar-05.png' %}" class="img-fluid rounded-circle" alt="" />
-                    <small class="mx-2">miro </small>
-                  </a>
-                  <span class="p-2 content-commemt">هو شاعر من شعراء العصر المملوكي في مصر والذي كان من شعراء
-                    القرن الثامن الهجري والموافق الرابع عشر الميلادي</span>
-                </div>
-                <div class="like-reply d-flex w-100 justify-content-around mt-3">
-                  <label class="active">
-                    <i class="fa-solid fa-thumbs-up"></i>
-                    <span>أعجاب</span>
-                  </label>
-                  <label >
-                    <i class="fa-solid fa-share-from-square"></i>
-                    <span> مشاركة</span>
-                  </label>
-                </div>
-              </div>
-            </li>
-            <li class="list-group-item bg-white d-flex flex-wrap border  rounded my-2 pt-3 position-relative ">
-              <div>
-                <div class="d-flex flex-wrap">
-                  <div class="dropdown position-absolute">
-                    <button class=" " type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown"
-                      aria-expanded="false">
-                      <i class="fa-solid fa-ellipsis"></i>
-                    </button>
-                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                      <li><a class="dropdown-item" href="#">أخفاء التعليق</a></li>
-                      <li><a class="dropdown-item" href="#">نسخ التعليق</a></li>
-                      <li><a class="dropdown-item" href="#">ألابلاغ </a></li>
-                    </ul>
-                  </div>
-                  <a href="#" class="user-name w-100 d-flex align-items-center text-decoration-none">
-                    <img src="{% static 'img/avatar-05.png' %}" class="img-fluid rounded-circle" alt="" />
-                    <small class="mx-2">miro </small>
-                  </a>
-                  <span class="p-2 content-commemt">هو شاعر من شعراء العصر المملوكي في مصر والذي كان من شعراء
-                    القرن الثامن الهجري والموافق الرابع عشر الميلادي</span>
-                </div>
-                <div class="like-reply d-flex w-100 justify-content-around mt-3">
-                  <label class="active">
-                    <i class="fa-solid fa-thumbs-up"></i>
-                    <span>أعجاب</span>
-                  </label>
-                  <label>
-                    <i class="fa-solid fa-share-from-square"></i>
-                    <span> مشاركة</span>
-                  </label>
-                </div>
-              </div>
-            </li>
-            <li class="list-group-item bg-white d-flex flex-wrap border  rounded my-2 pt-3 position-relative ">
-              <div>
-                <div class="d-flex flex-wrap">
-                  <div class="dropdown position-absolute">
-                    <button class=" " type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown"
-                      aria-expanded="false">
-                      <i class="fa-solid fa-ellipsis"></i>
-                    </button>
-                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                      <li><a class="dropdown-item" href="#">أخفاء التعليق</a></li>
-                      <li><a class="dropdown-item" href="#">نسخ التعليق</a></li>
-                      <li><a class="dropdown-item" href="#">ألابلاغ </a></li>
-                    </ul>
-                  </div>
-                  <a href="#" class="user-name w-100 d-flex align-items-center text-decoration-none">
-                    <img src="{% static 'img/avatar-05.png' %}" class="img-fluid rounded-circle" alt="" />
-                    <small class="mx-2">miro </small>
-                  </a>
-                  <span class="p-2 content-commemt">هو شاعر من شعراء العصر المملوكي في مصر والذي كان من شعراء
-                    القرن الثامن الهجري والموافق الرابع عشر الميلادي</span>
-                </div>
-                <div class="like-reply d-flex w-100 justify-content-around mt-3">
-                  <label class="active">
-                    <i class="fa-solid fa-thumbs-up"></i>
-                    <span>أعجاب</span>
-                  </label>
-                  <label>
-                    <i class="fa-solid fa-share-from-square"></i>
-                    <span> مشاركة</span>
-                  </label>
-                </div>
-              </div>
-
-            </li>
-            <li class="list-group-item bg-white d-flex flex-wrap border  rounded my-2 pt-3 position-relative ">
-              <div>
-                <div class="d-flex flex-wrap">
-                  <div class="dropdown position-absolute">
-                    <button class=" " type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown"
-                      aria-expanded="false">
-                      <i class="fa-solid fa-ellipsis"></i>
-                    </button>
-                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                      <li><a class="dropdown-item" href="#">أخفاء التعليق</a></li>
-                      <li><a class="dropdown-item" href="#">نسخ التعليق</a></li>
-                      <li><a class="dropdown-item" href="#">ألابلاغ </a></li>
-                    </ul>
-                  </div>
-                  <a href="#" class="user-name w-100 d-flex align-items-center text-decoration-none">
-                    <img src="{% static 'img/avatar-05.png' %}" class="img-fluid rounded-circle" alt="" />
-                    <small class="mx-2">miro </small>
-                  </a>
-                  <span class="p-2 content-commemt">هو شاعر من شعراء العصر المملوكي في مصر والذي كان من شعراء
-                    القرن الثامن الهجري والموافق الرابع عشر الميلادي</span>
-                </div>
-                <div class="like-reply d-flex w-100 justify-content-around mt-3">
-                  <label class="active">
-                    <i class="fa-solid fa-thumbs-up"></i>
-                    <span>أعجاب</span>
-                  </label>
-                  <label>
-                    <i class="fa-solid fa-share-from-square"></i>
-                    <span> مشاركة</span>
-                  </label>
-                </div>
-              </div>
-            </li>
-            <li class="list-group-item bg-white d-flex flex-wrap border  rounded my-2 pt-3 position-relative ">
-              <div>
-                <div class="d-flex flex-wrap">
-                  <div class="dropdown position-absolute">
-                    <button class=" " type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown"
-                      aria-expanded="false">
-                      <i class="fa-solid fa-ellipsis"></i>
-                    </button>
-                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                      <li><a class="dropdown-item" href="#">أخفاء التعليق</a></li>
-                      <li><a class="dropdown-item" href="#">نسخ التعليق</a></li>
-                      <li><a class="dropdown-item" href="#">ألابلاغ </a></li>
-                    </ul>
-                  </div>
-                  <a href="#" class="user-name w-100 d-flex align-items-center text-decoration-none">
-                    <img src="{% static 'img/avatar-05.png' %}" class="img-fluid rounded-circle" alt="" />
-                    <small class="mx-2">miro </small>
-                  </a>
-                  <span class="p-2 content-commemt">هو شاعر من شعراء العصر المملوكي في مصر والذي كان من شعراء
-                    القرن الثامن الهجري والموافق الرابع عشر الميلادي</span>
-                </div>
-                <div class="like-reply d-flex w-100 justify-content-around mt-3">
-                  <label class="active">
-                    <i class="fa-solid fa-thumbs-up"></i>
-                    <span>أعجاب</span>
-                  </label>
-                  <label>
-                    <i class="fa-solid fa-share-from-square"></i>
-                    <span> مشاركة</span>
-                  </label>
-                </div>
-              </div>
-            </li>
-            <!-- End comment -->
-          </ul>
-          <!-- End comments  -->
-            </div>
-            <div class="modal-footer">
-              <form class="w-100">
-                <div class="row">
-                  <input type="text" class="form-control" id="form-comment" aria-describedby="emailHelp"
-                    placeholder="كتابة تعليق جديد">
-
-                    <button type="submit" class="btn text-white" id="main-btn">نشر</button>
-                </div>
-
-              </form>
-            </div>
-          </div>
-        </div>
-      </div>    
-      <div class="modal fade" id="share" tabindex="-1" aria-labelledby="share-title" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h5 class="modal-title" id="share-title">مشاركة المنشور على ....</h5>
-              <button type="button" class="btn-close m-0" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body">
-              <span class="rounded-circle  copy-link"><i class="fa-solid fa-copy"></i></span>
-            </div>
-
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <!-- End box-comments-share   --> {% endcomment %}
-
+ 
   <!-- Start main -->
   <main class="main overflow-hidden">
     <div class="container">
@@ -294,16 +43,24 @@
                 </div>
               </div>
               <div class="content-post my-2">
-                <p class="my-3 lh-lg">{{post.content_post}}</p>
+                <p class="my-3 lh-lg">
+                  {{post.id.commets}}
+
+ 
+                </p>
               </div>
               <ul class="icons list-group flex-row justify-content-around position-relative">
                 <li class="list-group-item like-post active">
                   <i class="fa-solid fa-thumbs-up"></i>
                   <small>أعجاب</small>
                 </li>
-                <li class="list-group-item comment-icon"  data-bs-toggle="modal" data-bs-target="#box-comments">
-                  <i class="fa-solid fa-comments"></i>
-                  <small>ألتعليقات </small>
+                <li class="list-group-item comment-icon"  >
+                  <a href="{% url 'detail' post.id %}" class="overflow-hidden">
+
+                    <i class="fa-solid fa-comments"></i>
+                    <small>ألتعليقات </small>
+                  </a>
+  
                 </li>
 
 
@@ -331,7 +88,8 @@
                       <div class="modal-content">
                         <div class="modal-header">
                           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                          <h5 class="modal-title" id="scroll-title">ألتعليقات</h5>
+                          <a href="{% url 'detail' post.id %}" class="overflow-hidden"><h5 class="modal-title" id="scroll-title">ألتعليقات</h5></a>
+                          
                         </div>
                         <div class="modal-body">
                           <!-- main comments  -->
@@ -347,14 +105,16 @@
                                     </button>
                                     <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
                                       <li><a class="dropdown-item" href="#">أخفاء التعليق</a></li>
-                                      <li><a class="dropdown-item" href="#">نسخ التعليق</a></li>
+                                      <li><a class="dropdown-item" href="#">حذف</a></li>
                                       <li><a class="dropdown-item" href="#">ألابلاغ </a></li>
                                     </ul>
                                   </div>
-                                  <a href="#" class="user-name w-100 d-flex align-items-center text-decoration-none">
+                                  <a href="#" class="user-name fs-5 w-100 d-flex align-items-center text-decoration-none">
                                     <img src="{% static 'img/avatar-05.png' %}" class="img-fluid rounded-circle" alt="" style="width: 30px;"/>
                                     <small class="mx-2">miro </small>
+                                    
                                   </a>
+                                  <small class="mx-2 position-absolute" style='right: 80px;top: 22px;'>منذ 3 </small>
                                   <span class="p-2 content-commemt">هو شاعر من شعراء العصر المملوكي في مصر والذي كان من شعراء
                                     القرن الثامن الهجري والموافق الرابع عشر الميلادي</span>
                                 </div>
@@ -366,178 +126,12 @@
                                     <span>أعجاب</span>
                                   </label>
                                   <label>
-                                    <i class="fa-solid fa-share-from-square"></i>
-                                    <span> مشاركة</span>
+                                    <i class="fa-solid fa-copy" id="copy-comment"></i>
+                                    <span> نسخ</span>
                                   </label>
                                 </div>
                               </div>
                 
-                            </li>
-                            <li class="list-group-item bg-white d-flex flex-wrap border  rounded my-2 pt-3 position-relative ">
-                              <div>
-                                <div class="d-flex flex-wrap">
-                                  <div class="dropdown position-absolute">
-                                    <button class=" " type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown"
-                                      aria-expanded="false">
-                                      <i class="fa-solid fa-ellipsis"></i>
-                                    </button>
-                                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                                      <li><a class="dropdown-item" href="#">أخفاء التعليق</a></li>
-                                      <li><a class="dropdown-item" href="#">نسخ التعليق</a></li>
-                                      <li><a class="dropdown-item" href="#">ألابلاغ </a></li>
-                                    </ul>
-                                  </div>
-                                  <a href="#" class="user-name w-100 d-flex align-items-center text-decoration-none">
-                                    <img src="{% static 'img/avatar-05.png' %}" class="img-fluid rounded-circle" alt="" />
-                                    <small class="mx-2">miro </small>
-                                  </a>
-                                  <span class="p-2 content-commemt">هو شاعر من شعراء العصر المملوكي في مصر والذي كان من شعراء
-                                    القرن الثامن الهجري والموافق الرابع عشر الميلادي</span>
-                                </div>
-                                <div class="like-reply d-flex w-100 justify-content-around mt-3">
-                                  <label class="active">
-                                    <i class="fa-solid fa-thumbs-up"></i>
-                                    <span>أعجاب</span>
-                                  </label>
-                                  <label >
-                                    <i class="fa-solid fa-share-from-square"></i>
-                                    <span> مشاركة</span>
-                                  </label>
-                                </div>
-                              </div>
-                            </li>
-                            <li class="list-group-item bg-white d-flex flex-wrap border  rounded my-2 pt-3 position-relative ">
-                              <div>
-                                <div class="d-flex flex-wrap">
-                                  <div class="dropdown position-absolute">
-                                    <button class=" " type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown"
-                                      aria-expanded="false">
-                                      <i class="fa-solid fa-ellipsis"></i>
-                                    </button>
-                                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                                      <li><a class="dropdown-item" href="#">أخفاء التعليق</a></li>
-                                      <li><a class="dropdown-item" href="#">نسخ التعليق</a></li>
-                                      <li><a class="dropdown-item" href="#">ألابلاغ </a></li>
-                                    </ul>
-                                  </div>
-                                  <a href="#" class="user-name w-100 d-flex align-items-center text-decoration-none">
-                                    <img src="{% static 'img/avatar-05.png' %}" class="img-fluid rounded-circle" alt="" />
-                                    <small class="mx-2">miro </small>
-                                  </a>
-                                  <span class="p-2 content-commemt">هو شاعر من شعراء العصر المملوكي في مصر والذي كان من شعراء
-                                    القرن الثامن الهجري والموافق الرابع عشر الميلادي</span>
-                                </div>
-                                <div class="like-reply d-flex w-100 justify-content-around mt-3">
-                                  <label class="active">
-                                    <i class="fa-solid fa-thumbs-up"></i>
-                                    <span>أعجاب</span>
-                                  </label>
-                                  <label>
-                                    <i class="fa-solid fa-share-from-square"></i>
-                                    <span> مشاركة</span>
-                                  </label>
-                                </div>
-                              </div>
-                            </li>
-                            <li class="list-group-item bg-white d-flex flex-wrap border  rounded my-2 pt-3 position-relative ">
-                              <div>
-                                <div class="d-flex flex-wrap">
-                                  <div class="dropdown position-absolute">
-                                    <button class=" " type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown"
-                                      aria-expanded="false">
-                                      <i class="fa-solid fa-ellipsis"></i>
-                                    </button>
-                                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                                      <li><a class="dropdown-item" href="#">أخفاء التعليق</a></li>
-                                      <li><a class="dropdown-item" href="#">نسخ التعليق</a></li>
-                                      <li><a class="dropdown-item" href="#">ألابلاغ </a></li>
-                                    </ul>
-                                  </div>
-                                  <a href="#" class="user-name w-100 d-flex align-items-center text-decoration-none">
-                                    <img src="{% static 'img/avatar-05.png' %}" class="img-fluid rounded-circle" alt="" />
-                                    <small class="mx-2">miro </small>
-                                  </a>
-                                  <span class="p-2 content-commemt">هو شاعر من شعراء العصر المملوكي في مصر والذي كان من شعراء
-                                    القرن الثامن الهجري والموافق الرابع عشر الميلادي</span>
-                                </div>
-                                <div class="like-reply d-flex w-100 justify-content-around mt-3">
-                                  <label class="active">
-                                    <i class="fa-solid fa-thumbs-up"></i>
-                                    <span>أعجاب</span>
-                                  </label>
-                                  <label>
-                                    <i class="fa-solid fa-share-from-square"></i>
-                                    <span> مشاركة</span>
-                                  </label>
-                                </div>
-                              </div>
-                
-                            </li>
-                            <li class="list-group-item bg-white d-flex flex-wrap border  rounded my-2 pt-3 position-relative ">
-                              <div>
-                                <div class="d-flex flex-wrap">
-                                  <div class="dropdown position-absolute">
-                                    <button class=" " type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown"
-                                      aria-expanded="false">
-                                      <i class="fa-solid fa-ellipsis"></i>
-                                    </button>
-                                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                                      <li><a class="dropdown-item" href="#">أخفاء التعليق</a></li>
-                                      <li><a class="dropdown-item" href="#">نسخ التعليق</a></li>
-                                      <li><a class="dropdown-item" href="#">ألابلاغ </a></li>
-                                    </ul>
-                                  </div>
-                                  <a href="#" class="user-name w-100 d-flex align-items-center text-decoration-none">
-                                    <img src="{% static 'img/avatar-05.png' %}" class="img-fluid rounded-circle" alt="" />
-                                    <small class="mx-2">miro </small>
-                                  </a>
-                                  <span class="p-2 content-commemt">هو شاعر من شعراء العصر المملوكي في مصر والذي كان من شعراء
-                                    القرن الثامن الهجري والموافق الرابع عشر الميلادي</span>
-                                </div>
-                                <div class="like-reply d-flex w-100 justify-content-around mt-3">
-                                  <label class="active">
-                                    <i class="fa-solid fa-thumbs-up"></i>
-                                    <span>أعجاب</span>
-                                  </label>
-                                  <label>
-                                    <i class="fa-solid fa-share-from-square"></i>
-                                    <span> مشاركة</span>
-                                  </label>
-                                </div>
-                              </div>
-                            </li>
-                            <li class="list-group-item bg-white d-flex flex-wrap border  rounded my-2 pt-3 position-relative ">
-                              <div>
-                                <div class="d-flex flex-wrap">
-                                  <div class="dropdown position-absolute">
-                                    <button class=" " type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown"
-                                      aria-expanded="false">
-                                      <i class="fa-solid fa-ellipsis"></i>
-                                    </button>
-                                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                                      <li><a class="dropdown-item" href="#">أخفاء التعليق</a></li>
-                                      <li><a class="dropdown-item" href="#">نسخ التعليق</a></li>
-                                      <li><a class="dropdown-item" href="#">ألابلاغ </a></li>
-                                    </ul>
-                                  </div>
-                                  <a href="#" class="user-name w-100 d-flex align-items-center text-decoration-none">
-                                    <img src="{% static 'img/avatar-05.png' %}" class="img-fluid rounded-circle" alt="" />
-                                    <small class="mx-2">miro </small>
-                                  </a>
-                                  <span class="p-2 content-commemt">هو شاعر من شعراء العصر المملوكي في مصر والذي كان من شعراء
-                                    القرن الثامن الهجري والموافق الرابع عشر الميلادي</span>
-                                </div>
-                                <div class="like-reply d-flex w-100 justify-content-around mt-3">
-                                  <label class="active">
-                                    <i class="fa-solid fa-thumbs-up"></i>
-                                    <span>أعجاب</span>
-                                  </label>
-                                  <label>
-                                    <i class="fa-solid fa-share-from-square"></i>
-                                    <span> مشاركة</span>
-                                  </label>
-                                </div>
-                              </div>
                             </li>
                             <!-- End comment -->
                           </ul>
@@ -546,26 +140,17 @@
 
                         
                         <div class="modal-footer">
-                          <form class="w-100">
-                            <div class="row">
-                              <div class='col-12'>
-                                <input type="text" class="form-control" id="form-comment" aria-describedby="emailHelp"
-                                placeholder="كتابة تعليق جديد">
-            
-                                <button type="submit" class="btn text-white" id="main-btn">نشر</button>
-                              </div>
-                            </div>
-                          </form>
+
                         </div>
                       </div>
                     </div>
-                  </div>    
+                  </div>
 
 
 
 
 
-                  <div class="modal fade" id="share" tabindex="-1" aria-labelledby="share-title" aria-hidden="true">
+                  <div class="modal fade w-100" id="share" tabindex="-1" aria-labelledby="share-title" aria-hidden="true">
                     <div class="modal-dialog modal-dialog-centered">
                       <div class="modal-content">
                         <div class="modal-header">
@@ -573,7 +158,7 @@
                           <button type="button" class="btn-close m-0" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
                         <div class="modal-body">
-                          <span class="rounded-circle  copy-link"><i class="fa-solid fa-copy"></i></span>
+                          <span class="rounded-circle  copy-link fs-2"><i class="fa-solid fa-copy"></i></span>
                         </div>
             
                       </div>
@@ -592,21 +177,14 @@
         <div class="col-md-4 popular-posts  py-2">
           <h5> المنشورات الرائجة</h5>
           <ul class="list-group">
+            {% for post in posts %}
             <li class="list-group-item  d-flex overflow-hidden mt-2" >
               <span class="px-2" ><i class="fa-solid fa-share-from-square" data-bs-toggle="modal" data-bs-target="#share"></i></span>
-              <a href="#" class="overflow-hidden"><small>يخ الثامن عشر من شهر ديسمبر من كل عام يحتفل
-                  العالم باليوم العالمي لذكرىid اعتمادها في منظمة ال</small></a>
+              <a href="{% url 'detail' post.id %}" class="overflow-hidden"><small>{{post.content_post}}</small></a>
             </li>
-            <li class="list-group-item  d-flex overflow-hidden mt-2" >
-              <span class="px-2" ><i class="fa-solid fa-share-from-square" data-bs-toggle="modal" data-bs-target="#share"></i></span>
-              <a href="#" class="overflow-hidden"><small>يخ الثامن عشر من شهر ديسمبر من كل عام يحتفل
-                  العالم باليوم العالمي لذكرىid اعتمادها في منظمة ال</small></a>
-            </li>
-            <li class="list-group-item  d-flex overflow-hidden mt-2" >
-              <span class="px-2" ><i class="fa-solid fa-share-from-square" data-bs-toggle="modal" data-bs-target="#share"></i></span>
-              <a href="#" class="overflow-hidden"><small>يخ الثامن عشر من شهر ديسمبر من كل عام يحتفل
-                  العالم باليوم العالمي لذكرىid اعتمادها في منظمة ال</small></a>
-            </li>
+            
+            {% endfor %}
+
 
           </ul>
         </div>
