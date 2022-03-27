@@ -37,26 +37,21 @@
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+          {% if user.is_authenticated %}
           <ul class="navbar-nav ms-auto my-2 mb-lg-0 links_header">
-            <li class="nav-item"><a href="#" class="nav-item mx-2 border rounded-circle d-flex justify-content-center align-items-center"
-                style="width: 40px; height: 40px">
-                <img src="{% static 'img/img-1.png' %}" class="img-fluid rounded-circle w-100 h-100" alt="" />
-              </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="{% url 'index' %}">الصفحة الرئيسية</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="{% url 'new_post' %}">أضافة منشور جديد </a>
-            </li>
-            <li class="nav-item mx-2"><a class="nav-link" href="#">تسجيل الدخول</a></li>
-            <li class="nav-item mx-2"><a class="nav-link" href="{% url 'register' %}">أنشاء حساب جديد </a></li>
-            
+            <li class="nav-item"><a href="#" class="nav-item mx-2 border rounded-circle d-flex justify-content-center align-items-center"style="width: 40px; height: 40px"><img src="{% static 'img/img-1.png' %}" class="img-fluid rounded-circle w-100 h-100" alt="" /></a></li>
+            <li class="nav-item"><a class="nav-link active" aria-current="page" href="{% url 'index' %}">الصفحة الرئيسية</a></li>
+            <li class="nav-item"><a class="nav-link" href="{% url 'new_post' %}">أضافة منشور جديد </a></li>
+            <li class="nav-item mx-2"><a class="nav-link" href="{% url 'logout' %}">تسجيل الخروج</a></li>
           </ul>
-          <!-- <form class="d-flex">
-        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-        <button class="btn btn-outline-success" type="submit">Search</button>
-      </form> -->
+          {% else %}
+          <ul class="navbar-nav ms-auto my-2 mb-lg-0 links_header">
+            <li class="nav-item"><a class="nav-link active" aria-current="page" href="{% url 'index' %}">الصفحة الرئيسية</a></li>
+            <li class="nav-item mx-2"><a class="nav-link" href="{% url 'login' %}">تسجيل الدخول</a></li>
+            <li class="nav-item mx-2"><a class="nav-link" href="{% url 'register' %}">أنشاء حساب جديد </a></li>
+          </ul>
+          {% endif %}
         </div>
         <a class="navbar-brand logo" href="#">أبراهيم الصويص</a>
 

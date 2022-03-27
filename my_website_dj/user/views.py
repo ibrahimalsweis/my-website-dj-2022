@@ -1,7 +1,8 @@
 
 from django.shortcuts import render ,redirect
 from django.contrib import messages
-from .forms import UserCreationForm
+from .forms import UserCreationForm 
+from django.contrib.auth import authenticate , login , logout
 # Create your views here.
 
 def register(request):
@@ -20,21 +21,20 @@ def register(request):
     }
     return render(request,'user/register.html',context)
 
-# def register(request):
-#     if request.method == 'POST':
-#         form = UserCreationForm(request.POST)
-#         if form.is_valid():
-#             new_user = form.save(commit=False)
-#             username = form.cleaned_data['username']
-#             # new_user.set_password(form.cleaned_data['password1'])
-#             # new_user.save()
+def login_user(request):
+    if request.method == 'POST':
+        username = request.POST['username']
+        password = request.POST['password']
+        user = authenticate(request , username=username, password=password)
+        if user is not None:
+            login(request,user)
+            messages.success(request,f'مرحباً {username} تم تسجيل الدخول بنجاح')
+            return redirect('index')
+        else:
+            messages.warning(request,f'هناك خطأ في البيانات')
+    return render(request,'user/signIn.html',context={'form': 't'})
 
-#             messages.success(
-#                 request, f'تهانينا {new_user} لقد تمت عملية التسجيل بنجاح.')
-#             return redirect('login')
-#     else:
-#         form = UserCreationForm()
-#     return render(request, 'user/register.html', {
-#         'title': 'التسجيل',
-#         'form': form,
-#     })
+
+def logout_user(request):
+    logout(request)
+    return render(request,'user/logout.html')
