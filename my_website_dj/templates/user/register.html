@@ -5,14 +5,39 @@
     <main class="main   ">
         <div class="container ">
             <div class="box w-75 m-auto mt-5    ">
-                <form class="row g-3" method='POST'>
-                  {% csrf_token %}
-                      {{form}}
-                    <!-- <div class="col-md-6">
-                      <label for="First-name" class="form-label">ألاسم الأول</label>
-                      <input type="text" class="form-control" id="First-name">
+                <form class="row g-3 justify-content-center" method='POST'>
+                  {% csrf_token %}  
+                  
+                    <div class="col-md-7">
+                      {{form.as_p}}
+                    </div>
+                    {% comment %} <div class="col-md-6">
+                      {{form.first_name.label}}
+                      {{form.first_name}}
                     </div>
                     <div class="col-md-6">
+                      {{form.last_name.label}}
+                      {{form.last_name}}
+                    </div>
+                    <div class="col-md-12">
+                      {{form.email.label}}
+                      {{form.email}}
+                    </div>
+                    <div class="col-md-12">
+                      {{form.username.label}}
+                      {{form.username}}
+                    </div>
+                    <div class="col-md-6">
+                      {{form.password1.label}}
+                      {{form.password1}}
+                    </div>
+                    <div class="col-md-6">
+                      {{form.password2.label}}
+                      {{form.password2}}
+                    </div> {% endcomment %}
+
+
+                    <!-- <div class="col-md-6">
                       <label for="Last-name" class="form-label">ألاسم الاخير</label>
                       <input type="text" class="form-control" id="Last-name">
                     </div>
@@ -35,7 +60,7 @@
                     </div> -->
 
 
-                    <div class="col-12 mt-5">
+                    <div class="col-7 mt-5">
                       <button type="submit" class="btn btn-primary" id="main-btn">أنشاء حساب </button><br>
                       <small class="m-0 mx-2 lh-lg">أذا لديك حساب يمكنك تسجيل الدخول من <a href="#">هنا</a></small>
                     </div>

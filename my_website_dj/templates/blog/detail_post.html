@@ -34,11 +34,11 @@
                   <li><a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#share">مشاركة</a></li>
                   {% if post.auth == user  %}
                   <li><a class="dropdown-item" href="{% url 'update_post' post.id %}">تعديل المنشور</a></li>
+                  <li><a class="dropdown-item" href="{% url 'delete_post' post.pk  %}">حذف</a></li>
                   {% endif %}
                   <li><a class="dropdown-item" href="#">حظر</a></li>
                   <li><a class="dropdown-item" href="#">أخفاء المنشور</a></li>
                   <li><a class="dropdown-item" href="#">ٌأبلاغ</a></li>
-                  <li><a class="dropdown-item" href="{% url 'delete_post' post.pk  %}">حذف</a></li>
                 </ul>
               </div>
             </div>

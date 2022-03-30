@@ -33,7 +33,7 @@ def login_user(request):
         if user is not None:
             login(request,user)
             messages.success(request,f'مرحباً {username} تم تسجيل الدخول بنجاح')
-            return redirect('index')
+            return redirect('profile')
         else:
             messages.warning(request,f'هناك خطأ في البيانات')
     return render(request,'user/signIn.html',context={'form': 't'})

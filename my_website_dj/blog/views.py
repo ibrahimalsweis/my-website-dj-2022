@@ -59,12 +59,12 @@ class UpdatePostView(UserPassesTestMixin,LoginRequiredMixin,UpdateView):
             return True
         return False
 
-class DeletePostView(UserPassesTestMixin,LoginRequiredMixin,DeleteView):
+class DeletePostView(UserPassesTestMixin, LoginRequiredMixin, DeleteView):
     model = Post
+    success_url = '/'
 
     def test_func(self):
         post = self.get_object()
-
         if self.request.user == post.auth:
-            return redirect('index')
+            return True
         return False

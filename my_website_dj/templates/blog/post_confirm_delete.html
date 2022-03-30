@@ -1,0 +1,74 @@
+{% extends 'base.html' %}
+
+{% load static %}
+{% block content %}
+
+ 
+  <!-- Start main -->
+  <main class="main overflow-hidden">
+    <div class="container">
+      <div class="row pt-3">
+
+        <div class="col-md-8">
+          <ul class="list-group posts">
+            <!-- Start post -->
+            <li class="list-group-item post my-2">
+              <div class="user-info d-flex position-relative justify-content-between align-items-center">
+                <div class="d-flex justify-content-between align-items-center">
+                  <a href="#" class="user text-decoration-none d-flex align-items-center">
+                    <img
+                      src="{{object.auth.profile.img.url}}"
+                      class="img-fluid rounded-circle"
+                      alt=""
+                    />
+                    <div class="mx-2"><small>{{object.auth}}</small><br /></div>
+                  </a>
+                  <small class="position-absolute data-time">
+                    {{object.date_post}}
+                  </small>
+                </div>
+
+              </div>
+              <div class="content-post my-2 ">
+                <p class="my-3 lh-lg fs-4">{{object.content_post}}</p>
+              </div>
+
+
+
+            </li>
+            <!-- End post -->
+          </ul>
+        </div>
+        <div class="col-md-8">
+          <form class=" g-3 justify-content-center" method='POST'>
+            {% csrf_token %}
+
+              <div class=" d-flex align-items-center ">
+                <input type="submit" class="btn btn-primary" id='main-btn'  value='حذف'/>
+                <a class="nav-link" href="{% url 'detail' object.pk  %}">الغاء</a>
+              </div>
+            </form>
+        </div>
+        <!-- Start popular-posts  -->
+        <div class="col-md-4 popular-posts  py-2">
+          <h5> المنشورات الرائجة</h5>
+          <ul class="list-group">
+            {% for post in posts %}
+            <li class="list-group-item  d-flex overflow-hidden mt-2" >
+              <span class="px-2" ><i class="fa-solid fa-share-from-square" data-bs-toggle="modal" data-bs-target="#share"></i></span>
+              <a href="{% url 'detail' post.id %}" class="overflow-hidden"><small>{{post.content_post}}</small></a>
+            </li>
+            
+            {% endfor %}
+
+
+          </ul>
+        </div>
+        <!-- End popular-posts  -->
+      </div>
+    </div>
+  </main>
+  
+  <!-- End main -->
+
+{% endblock content %}

@@ -1,18 +1,22 @@
 
 
+import email
+from turtle import textinput
 from django import forms
 from django.contrib.auth.models import User
 from .models import Profile
 class UserCreationForm(forms.ModelForm):
 
-    username = forms.CharField(max_length=99,label='أسم المستخدم ')
-    first_name = forms.CharField(max_length=99,label='ألاسم الاول')
-    last_name = forms.CharField(max_length=99 ,label='ألاسم الاخير')
-    password1 = forms.CharField(min_length=8,label='كلمة المرور ' , widget=forms.PasswordInput())
-    password2= forms.CharField(min_length=8,label='تأكيد كلمة المرور ',widget=forms.PasswordInput())
+    username = forms.CharField(max_length=99,label='أسم المستخدم ',widget=forms.TextInput(attrs={'class':"form-control mt-2"}))
+    first_name = forms.CharField(max_length=99,label='ألاسم الاول',widget=forms.TextInput(attrs={'class':"form-control mt-2 mt-2"}))
+    email = forms.CharField(max_length=99,label='البريد الألكتروني',widget=forms.EmailInput(attrs={'class':"form-control mt-2"}))
+    last_name = forms.CharField(max_length=99 ,label='ألاسم الاخير',widget=forms.TextInput(attrs={'class':"form-control mt-2"}))
+    password1 = forms.CharField(min_length=8,label='كلمة المرور ' , widget=forms.PasswordInput(attrs={'class':"form-control mt-2"}))
+    password2= forms.CharField(min_length=8,label='تأكيد كلمة المرور ',widget=forms.PasswordInput(attrs={'class':"form-control mt-2"}))
     class Meta:
         model = User
-        fields = ['username','email','first_name','last_name','password1','password2']
+        fields = ['first_name','last_name','username','email','password1','password2']
+
 
     def clean_password2(self):
         c_data = self.cleaned_data
