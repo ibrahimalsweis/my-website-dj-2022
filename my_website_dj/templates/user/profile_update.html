@@ -1,0 +1,53 @@
+{% extends 'base.html' %} {% load static %} 
+{% block content %}
+
+    <!-- Start main -->
+    <main class="main   ">
+        <div class="container ">
+            <div class="box w-75 m-auto mt-5    ">
+                <form class="row g-3" method='POST' enctype="multipart/form-data">
+                  {% csrf_token %}
+                  {{user_form}}
+                  <!-- {{profile_form}} -->
+                  <div class="col-12">
+                    <div class="mb-3">
+                      <label for="img" class="form-label">اختر صورة </label>
+                      <input class="form-control" type="file" accept="image/*" name="img" id="img" >
+                    </div>
+                  </div>
+                    <!-- <div class="col-md-6">
+                      <label for="First-name" class="form-label">ألاسم الأول</label>
+                      <input type="text" class="form-control" id="First-name">
+                    </div>
+                    <div class="col-md-6">
+                      <label for="Last-name" class="form-label">ألاسم الاخير</label>
+                      <input type="text" class="form-control" id="Last-name">
+                    </div>
+                    <div class="col-md-12">
+                      <label for="username" class="form-label">أسم المستخدم </label>
+                      <input type="text" class="form-control" id="username">
+                    </div>
+                    <div class="col-md-12">
+                      <label for="email" class="form-label">ألبريد الألكتروني</label>
+                      <input type="email" class="form-control" id="email">
+                    </div>
+
+                    <div class="col-md-6">
+                      <label for="inputPassword4" class="form-label">كلمة المرور</label>
+                      <input type="password" class="form-control" id="inputPassword4">
+                    </div>
+                    <div class="col-md-6">
+                      <label for="inputPassword4" class="form-label"> تأكيد كلمة المرور</label>
+                      <input type="password" class="form-control" id="inputPassword4">
+                    </div> -->
+
+
+                    <div class="col-12 mt-5">
+                      <button type="submit" class="btn btn-primary" id="main-btn"> حفظ التغييرات  </button><br>
+                    </div>
+                  </form>
+            </div>
+        </div>
+    </main>
+    <!-- End main -->
+  {% endblock content %}

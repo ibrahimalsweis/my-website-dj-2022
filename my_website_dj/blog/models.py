@@ -1,8 +1,8 @@
 
-import email
 from django.db import models
 from django.contrib.auth.models import User
 from django.utils import timezone
+from django.urls import reverse
 
 class Post(models.Model):
     content_post = models.TextField(max_length=10000)
@@ -12,6 +12,8 @@ class Post(models.Model):
     def __str__(self):
         return str(self.content_post)
 
+    def get_absolute_url(self):
+        return reverse('detail',args=[self.pk ])
     class Meta:
         ordering = ('-date_post', )
 
@@ -24,7 +26,7 @@ class Comment(models.Model):
     email = models.EmailField(verbose_name='ألبريد ألالكتروني')
     content_comment = models.TextField(max_length=5000,verbose_name='محتوى التعليق ')
     date_comment = models.DateTimeField(auto_now_add=True)
-    active = models.BooleanField(default=False)
+    active = models.BooleanField(default=True)
     post = models.ForeignKey(Post,on_delete=models.CASCADE , related_name='comments')
 
     def __str__(self):
@@ -32,3 +34,4 @@ class Comment(models.Model):
 
     class Meta:
         ordering = ('date_comment',)
+

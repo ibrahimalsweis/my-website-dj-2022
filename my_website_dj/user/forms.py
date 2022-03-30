@@ -1,7 +1,8 @@
 
+
 from django import forms
 from django.contrib.auth.models import User
-
+from .models import Profile
 class UserCreationForm(forms.ModelForm):
 
     username = forms.CharField(max_length=99,label='أسم المستخدم ')
@@ -26,4 +27,17 @@ class UserCreationForm(forms.ModelForm):
         return c_data['username']
 
 
-        
+
+
+class UserForm_update(forms.ModelForm):
+    first_name = forms.CharField(max_length=99,label='ألاسم الاول')
+    last_name = forms.CharField(max_length=99 ,label='ألاسم الاخير')
+    email = forms.EmailField(label='البريد الالكتروني')
+    class Meta:
+        model =  User
+        fields = ('first_name','last_name','email','username')
+
+class ProfileForm_update(forms.ModelForm):
+    class Meta:
+        model =  Profile
+        fields = ('img',)

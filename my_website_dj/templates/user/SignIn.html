@@ -10,7 +10,7 @@
             <div class="box w-75 m-auto mt-5    ">
               {% if messages %}
               {% for message in messages %}
-              <div class="alert alert-danger">{{message}}</div>
+              <div class="alert alert-{{message.tags}}">{{message}}</div>
               {% endfor %}
             {% endif %}
                 <form class="row g-3 justify-content-center" method='POSt'>

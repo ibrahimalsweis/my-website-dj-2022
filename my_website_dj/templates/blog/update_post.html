@@ -12,18 +12,18 @@
 
                         <form class="row row-cols-lg-auto g-3 align-items-center" method="POST">
                             {% csrf_token %}
+                            
                             {% comment %} {{form}} {% endcomment %}
-                            <div class="col-12 form-floting">
-                                <label class="my-2 " for="post-content">محتوى المنشور</label>
+                             <div class="col-12 form-floting">
+                                <label class="my-2 " for="post-content">تعديل المنشور</label>
                                 <div class="input-group">
-                                    <textarea type="text" class="form-control" name="content_post" id="id_content_post"
-                                        placeholder="محتوى المنشور"></textarea>
+                                    <textarea type="text" class="form-control" value name="content_post" id="id_content_post"
+                                        placeholder="محتوى المنشور">{{object.content_post}}</textarea>
                                 </div>
                             </div>
 
-   
                             <div class="col-12 my-3">
-                                <button type="submit" id="main-btn" class="btn btn-primary">نشر</button>
+                                <button type="submit" id="main-btn" class="btn btn-primary">حفظ</button>
                             </div>
                         </form>
                 </div>
